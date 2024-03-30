@@ -15,11 +15,23 @@ public class UserController {
     UserService userService;
     @RequestMapping("/")
     public String Index(){return "redirect:/list";}
+    @RequestMapping("/home")
+    public String home() {
+        return "user/index/index.html";
+    }
     @RequestMapping("/list")
     public String list(Model model) {
         List<User> users = userService.getUserList();
         model.addAttribute("users", users);
         return "user/list";
+    }
+    @RequestMapping("/user/input-xd")
+    public String xd() {
+        return "user/input-xd/input-xd";
+    }
+    @RequestMapping("/xd")
+    public String toxd() {
+        return "user/xd";
     }
     @RequestMapping("/toAdd")
     public String toAdd(){

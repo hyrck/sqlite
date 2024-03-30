@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>input-xd</title>
+    <link rel="stylesheet" th:href="@{/css/input-xd.css}">
+</head>
+<body>
+<div class="page">
+
+    <div class="panel">
+        <div class="panel_visible">
+            <!--登录表单-->
+            <div class="panel_content ">
+                <div class="panel_title">  健康检测 </div>
+                <form class="form">
+                    <label class="form_label" for="usernameIn">血糖</label>
+                    <input class="form_input" type="text" id="usernameIn" name="usernameIn">
+                    <label class="form_label" for="usernameIn">血压</label>
+                    <input class="form_input" type="text" id="usernameIn" name="usernameIn">
+                    <label class="form_label" for="usernameIn">血脂</label>
+                    <input class="form_input" type="text" id="usernameIn" name="usernameIn">
+                 
+                    <a th:href ="@{/xd}">
+                        <button class="form_btn" type="button" value="Submit">确定</button>
+                    </a>
+                    
+                    <br>
+                    <a th:href="@{/home}">
+                    <button class="form_toggle js-formToggle" type="button">返回</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="panel_back js-imageAnimate">
+            <img class="panel_img" src=""   />
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
